@@ -1,0 +1,73 @@
+
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" version="1.1" width="186.70309448242188" height="54">
+            <defs>
+              <style type="text/css">svg {
+          background-color: #fff; }
+        
+        .root text,
+        .root tspan {
+          font: 12px Arial; }
+        
+        .root path {
+          fill-opacity: 0;
+          stroke-width: 2px;
+          stroke: #000; }
+        
+        .root circle {
+          fill: #6b6659;
+          stroke-width: 2px;
+          stroke: #000; }
+        
+        .anchor text, .any-character text {
+          fill: #fff; }
+        
+        .anchor rect, .any-character rect {
+          fill: #6b6659; }
+        
+        .escape text, .charset-escape text, .literal text {
+          fill: #000; }
+        
+        .escape rect, .charset-escape rect {
+          fill: #bada55; }
+        
+        .literal rect {
+          fill: #dae9e5; }
+        
+        .charset .charset-box {
+          fill: #cbcbba; }
+        
+        .subexp .subexp-label tspan,
+        .charset .charset-label tspan,
+        .match-fragment .repeat-label tspan {
+          font-size: 10px; }
+        
+        .repeat-label {
+          cursor: help; }
+        
+        .subexp .subexp-label tspan,
+        .charset .charset-label tspan {
+          dominant-baseline: text-after-edge; }
+        
+        .subexp .subexp-box {
+          stroke: #908c83;
+          stroke-dasharray: 6,2;
+          stroke-width: 2px;
+          fill-opacity: 0; }
+        
+        .quote {
+          fill: #908c83; }
+        </style>
+            </defs>
+            <metadata>
+              <rdf:rdf>
+                <cc:license rdf:about="http://creativecommons.org/licenses/by/3.0/">
+                  <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"></cc:permits>
+                  <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"></cc:permits>
+                  <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"></cc:requires>
+                  <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"></cc:requires>
+                  <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"></cc:permits>
+                </cc:license>
+              </rdf:rdf>
+            </metadata>
+          <desc>Created with Snap</desc><g class="root" transform="matrix(1,0,0,1,15,10)"><g class="regexp match" transform="matrix(1,0,0,1,10,0)"><path d="M40.015625,22H65.0156M89.7031,22H114.7031"></path><g class="match-fragment literal" transform="matrix(1,0,0,1,0,10)"><g class="label"><rect width="40.015625" height="24" rx="3" ry="3"></rect><text x="0" y="0" transform="matrix(1,0,0,1,5,17)"><tspan class="quote">“</tspan><tspan>colo</tspan><tspan class="quote">”</tspan></text></g></g><g class="match-fragment" transform="matrix(1,0,0,1,50.0156,0)"><path d="M0,22q10,0 10,-10v-2q0,-10 10,-10h14.6875q10,0 10,10v2q0,10 10,10"></path><g class="literal" transform="matrix(1,0,0,1,15,10)"><g class="label"><rect width="24.6875" height="24" rx="3" ry="3"></rect><text x="0" y="0" transform="matrix(1,0,0,1,5,17)"><tspan class="quote">“</tspan><tspan>u</tspan><tspan class="quote">”</tspan></text></g></g></g><g class="match-fragment literal" transform="matrix(1,0,0,1,114.7031,10)"><g class="label"><rect width="22" height="24" rx="3" ry="3"></rect><text x="0" y="0" transform="matrix(1,0,0,1,5,17)"><tspan class="quote">“</tspan><tspan>r</tspan><tspan class="quote">”</tspan></text></g></g></g><path d="M10,22H0M146.7031,22H156.70309448242188"></path><circle cx="0" cy="22" r="5"></circle><circle cx="156.70309448242188" cy="22" r="5"></circle></g></svg>
+        

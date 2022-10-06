@@ -1,0 +1,73 @@
+
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" version="1.1" width="198.04684448242188" height="104">
+            <defs>
+              <style type="text/css">svg {
+          background-color: #fff; }
+        
+        .root text,
+        .root tspan {
+          font: 12px Arial; }
+        
+        .root path {
+          fill-opacity: 0;
+          stroke-width: 2px;
+          stroke: #000; }
+        
+        .root circle {
+          fill: #6b6659;
+          stroke-width: 2px;
+          stroke: #000; }
+        
+        .anchor text, .any-character text {
+          fill: #fff; }
+        
+        .anchor rect, .any-character rect {
+          fill: #6b6659; }
+        
+        .escape text, .charset-escape text, .literal text {
+          fill: #000; }
+        
+        .escape rect, .charset-escape rect {
+          fill: #bada55; }
+        
+        .literal rect {
+          fill: #dae9e5; }
+        
+        .charset .charset-box {
+          fill: #cbcbba; }
+        
+        .subexp .subexp-label tspan,
+        .charset .charset-label tspan,
+        .match-fragment .repeat-label tspan {
+          font-size: 10px; }
+        
+        .repeat-label {
+          cursor: help; }
+        
+        .subexp .subexp-label tspan,
+        .charset .charset-label tspan {
+          dominant-baseline: text-after-edge; }
+        
+        .subexp .subexp-box {
+          stroke: #908c83;
+          stroke-dasharray: 6,2;
+          stroke-width: 2px;
+          fill-opacity: 0; }
+        
+        .quote {
+          fill: #908c83; }
+        </style>
+            </defs>
+            <metadata>
+              <rdf:rdf>
+                <cc:license rdf:about="http://creativecommons.org/licenses/by/3.0/">
+                  <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"></cc:permits>
+                  <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"></cc:permits>
+                  <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"></cc:requires>
+                  <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"></cc:requires>
+                  <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"></cc:permits>
+                </cc:license>
+              </rdf:rdf>
+            </metadata>
+          <desc>Created with Snap</desc><g class="root" transform="matrix(1,0,0,1,15,10)"><g class="regexp match" transform="matrix(1,0,0,1,10,0)"><path d="M44.703125,47.5H64.7031"></path><g class="match-fragment literal" transform="matrix(1,0,0,1,0,35.5)"><g class="label"><rect width="44.703125" height="24" rx="3" ry="3"></rect><text x="0" y="0" transform="matrix(1,0,0,1,5,17)"><tspan class="quote">“</tspan><tspan>hobb</tspan><tspan class="quote">”</tspan></text></g></g><g class="match-fragment subexp" transform="matrix(1,0,0,1,54.7031,0)"><rect rx="3" ry="3" class="subexp-box" transform="matrix(1,0,0,1,0,11)" width="93.34375" height="73"></rect><text x="0" y="0" class="subexp-label" transform="matrix(1,0,0,1,0,11)"><tspan>group #1</tspan></text><g class="regexp" transform="matrix(1,0,0,1,10,21)"><path d="M0,26.5c10,0 10,-14.5 20,-14.5M73.34375,26.5c-10,0 -10,-14.5 -20,-14.5M0,26.5c10,0 10,14.5 20,14.5M73.34375,26.5c-10,0 -10,14.5 -20,14.5"></path><g transform="matrix(1,0,0,1,20,0)" class="regexp-matches"><path d="M0,12h4.6719M28.6719,12H33.34375M0,41h0M33.34375,41H33.34375"></path><g class="match match-fragment literal" transform="matrix(1,0,0,1,4.6719,0)"><g class="label"><rect width="24" height="24" rx="3" ry="3"></rect><text x="0" y="0" transform="matrix(1,0,0,1,5,17)"><tspan class="quote">“</tspan><tspan>y</tspan><tspan class="quote">”</tspan></text></g></g><g class="match match-fragment literal" transform="matrix(1,0,0,1,0,29)"><g class="label"><rect width="33.34375" height="24" rx="3" ry="3"></rect><text x="0" y="0" transform="matrix(1,0,0,1,5,17)"><tspan class="quote">“</tspan><tspan>ies</tspan><tspan class="quote">”</tspan></text></g></g></g></g></g></g><path d="M10,47.5H0M148.04685,47.5H168.04684448242188"></path><circle cx="0" cy="47.5" r="5"></circle><circle cx="168.04684448242188" cy="47.5" r="5"></circle></g></svg>
+        
