@@ -72,23 +72,36 @@
 ### Wildcard & Anchors
 - **Dot**: The `.` matches any single character except the newline character `\n`.
   - E.g.: `a.c` matches `abc`, `a c`, `a1c`, `a-c`, and so on.
->> a “word” for the purposes of a regular expression is defined as any sequence of digits, underscores, or letters
+>> a “word” for the purposes of a regular expression is defined as any sequence of **word characters**: **digits**, **underscores**, or **letters**
 - **Anchors**: 
   - **Caret**: The `^` matches the **beginning** of a **string** or a **new line** if the multiline flag is on.
     - E.g.: `^a` matches `a` in `abc`, but not `a` in `bac`.
   - **Dollar Sign**: The `$` matches the **end** of a **string** or a **line** if the multiline flag is on.
     - E.g.: `a$` matches `a` in `bca`, but not `a` in `abc` or `bac`.
-  - **Word Boundary**: The `\b` matches a **word boundary** which is any non-word characters(digits, underscores, or letters).
+  - **Word Boundary**: The `\b` matches a **word boundary** which is either a **whitespace** character or the **beginning** or **end** of a string or a **punctuation**.
+    - The following three positions are qualified as word boundaries:
+      - Before the first character in a string if the first character is a word character.
+      - After the last character in a string if the last character is a word character.
+      - Between two characters in a string if one is a word character and the other is not.
+    - E.g.: The word boundaries in `Mostafa, focus!` are:
+      - Before the `M`.
+      - After the last `a`.
+      - Before the `f`.
+      - After the `s` in `focus`.
+    - E.g.: `\bMostafa\b` matches `Mostafa` in `Mostafa, focus!`, but not `Mostafa` in `Mostafaaaaa, focus!`.
     - E.g.: `\bworld` matches `world` in `hello world` and `hello-world`, but not `world` in `hello_world` or `hello5world` or `helloworld`. 
-  - **Non-Word Boundary**: The `\B` matches a **non-word boundary** which is any word characters(digits, underscores, or letters).
-    - E.g.: `hello\B` matches `hello` in `hello` in `hello world` or `hello-world` or `helloworld`, but not `hello_world` and `hello5world`.
+    - E.g.: `\b\d\d:\d\d\b` matches `1:30` in `I wrote this at 01:30 AM`
+  - **Non-Word Boundary**: The `\B` matches a **non-word boundary** which is any word character like **digits**, **underscores**, or **letters**.
+    - E.g.: `\Bworld` matches `world` in `hello_world`, `hello5world` or `helloworld`, but not `world` in `hello world` or `hello-world`.
 ### Grouping
 - **Pipe Symbol**: The `|` matches either the **preceding** or the **following** element.
-  - ![img](img/hobby_ies.svg)
   - E.g.: `hobby|ies` matches `hobby` in `my hobby` and `ies` in `hobbies`.
-- **Parenthesis**: The `()` matches one of the words in the parenthesis.
-  - ![img](img/hobb(y_ies).svg)
+  - ![img](img/hobby_ies.svg)
+- **Parenthesis**: The `()` is used for grouping characters together to allow operators to act on them as a group.
   - E.g.: `hobb(y|ies)` matches `hobby` in `my hobby` and `hobbies` in `my hobbies`.
+  - ![img](img/hobb(y_ies).svg)
+  - E.g.: `a(bc)+` matches `abc` in `abc`, `abcbc` in `abcbc`, and `abcbcbc` in `abcbcbccc`.
+  - ![img](img/a(bc)+.svg)
 #### Aliases
 - **Aliases**: To save typing for common ranges.
   - **\d**: Expands to `[0-9]` and matches any digit.
@@ -177,3 +190,5 @@ For performing matches based on information that follows or precedes a pattern, 
   - Negative Lookbehind `(?<!f)` : 
     - Asserts that what immediately precedes the current position in the string is not `f`
     - `(?<!y)z` will match `z` in `zyx` but will not match `z` in `xyz`.
+
+>> Diagrams made with [Regex Pal](https://www.regexpal.com/).
