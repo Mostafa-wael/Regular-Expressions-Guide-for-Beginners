@@ -26,13 +26,13 @@
 
 ### Simple text
 - **String**: Typing a string of characters will match that string.
-    - E.g.: `hello` will match every `hello` in the passage.
+    - E.g.: `mostafa` will match every `mostafa` in the passage.
 - **Single Character**: Typing a solo characters will match that characters.
     - E.g.: `!` will match every `!` in the passage.
 ### Disjunction
 - **Disjunction**: Typing characters enclosed by square brackets `[]` to match any of the characters from this list.
     - ![img](img/[hH]ello.svg)
-    - E.g.: `[hH]ello` will match every `hello` or `Hello` in the passage.
+    - E.g.: `[mM]ostafa` will match every `mostafa` or `Mostafa` in the passage.
 ### Range
 - **Range**: Typing a range of characters enclosed by square brackets `[]` and separated by dashes `-` to match any of the characters from this range.
     - E.g.: `[a-c]ello` will match every `aello`, `bello`, `cello` in the passage.
@@ -89,10 +89,10 @@
       - Before the `f`.
       - After the `s` in `focus`.
     - E.g.: `\bMostafa\b` matches `Mostafa` in `Mostafa, focus!`, but not `Mostafa` in `Mostafaaaaa, focus!`.
-    - E.g.: `\bworld` matches `world` in `hello world` and `hello-world`, but not `world` in `hello_world` or `hello5world` or `helloworld`. 
+    - E.g.: `\bWael` matches `Wael` in `mostafa Wael` and `mostafa-Wael`, but not `Wael` in `mostafa_Wael` or `mostafa5Wael` or `mostafaWael`. 
     - E.g.: `\b\d\d:\d\d\b` matches `1:30` in `I wrote this at 01:30 AM`
   - **Non-Word Boundary**: The `\B` matches a **non-word boundary** which is any word character like **digits**, **underscores**, or **letters**.
-    - E.g.: `\Bworld` matches `world` in `hello_world`, `hello5world` or `helloworld`, but not `world` in `hello world` or `hello-world`.
+    - E.g.: `\BWael` matches `Wael` in `mostafa_Wael`, `mostafa5Wael` or `mostafaWael`, but not `Wael` in `mostafa Wael` or `mostafa-Wael`.
 ### Grouping
 - **Pipe Symbol**: The `|` matches either the **preceding** or the **following** element.
   - E.g.: `hobby|ies` matches `hobby` in `my hobby` and `ies` in `hobbies`.
