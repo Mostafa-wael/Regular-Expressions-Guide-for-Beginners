@@ -72,8 +72,11 @@
 ### Wildcard & Anchors
 - **Dot**: The `.` matches any single character except the newline character `\n`.
   - E.g.: `a.c` matches `abc`, `a c`, `a1c`, `a-c`, and so on.
+  - E.g.: `.{5}` matches any five-character string.
+  - E.g.: `.*Mostafa*.` matches any string with `Mostafa` as a sub-string.
+  - E.g.: `Mostafa.*Wael` matches any string that starts with `Mostafa` and ends with `Wael` (in the same line).
 >> a “word” for the purposes of a regular expression is defined as any sequence of **word characters**: **digits**, **underscores**, or **letters**
-- **Anchors**: 
+- **Anchors**: Doesn't match characters, rather they assert conditions about the string. 
   - **Caret**: The `^` matches the **beginning** of a **string** or a **new line** if the multiline flag is on.
     - E.g.: `^a` matches `a` in `abc`, but not `a` in `bac`.
   - **Dollar Sign**: The `$` matches the **end** of a **string** or a **line** if the multiline flag is on.
@@ -140,7 +143,7 @@
   - **\t**: Matches the tab character. 
 
 ## Simple Example
-Write a RegEx to find cases of the English word `the`. We want to get 
+Write a RegEx to find cases of the English word `the`. We want to get even if it at the beginning of the line or starts with a number. 
 1. `the`:
    - ![the](img/the.svg)
    - Wrong!
@@ -164,7 +167,20 @@ Write a RegEx to find cases of the English word `the`. We want to get
    - Correct! 
    - By specifying that before the `the` we require either `the` beginning-of-line or a non-alphabetic character, and `the` same at the end of the line. 
    - Problems with consecutive `the`.
-
+## Substitutions
+- We can replace a string we have found -or parts of it- with something else.
+- E.g.: `s/this/that/` will replace `this` with `that`.
+- E.g.: `s/colour/color/` will replace `colour/` with `color/`.
+  
+## Capturing Groups & Referencing
+- Regex stores the captured patterns in memory and they can be called back and forth.
+- To do so, we must specify the regex in parentheses `()`.
+- E.g.: `CMP([0-9]+)` will capture the number `23` in `CMP 23` and save it i the memory.
+- We can call that exact number using a one-based index like this: `CMP([0-9]+) are \1 years old` will match `CMP 23 are 23 years old`.
+- E.g.: `The (.*)er they (.*)` will capture `The faster they ran` where `fast` can be accessed using `\1` and `ran` can be accessed using `\2`.
+- E.g.: `The (.*)er they (.*), the \1er we \2` will capture `The faster they ran, the faster we ran`.
+- This is called a **capturing group**, we can use a **non-capturing group** by adding `?:` before the expression in the parentheses. 
+- E.g.: `(?:some|few) (people) like \1` will match `some people like people` and `few people like people`. Where the `\1` will be replaced with `people` not `some` nor `few`, because they are in a **non-capturing group**.
 ## Types of Errors
 - The process we just went through was based on fixing two kinds of errors:
   - **False positives**, strings that we incorrectly **matched** like `other` or `there`.
@@ -190,5 +206,6 @@ For performing matches based on information that follows or precedes a pattern, 
   - Negative Lookbehind `(?<!f)` : 
     - Asserts that what immediately precedes the current position in the string is not `f`
     - `(?<!y)z` will match `z` in `zyx` but will not match `z` in `xyz`.
+  - >> we used `!` instead of `=` in the -ve expressions. 
 
 >> Diagrams made with [Regex Pal](https://www.regexpal.com/).
