@@ -32,6 +32,7 @@
 ### Disjunction
 - **Disjunction**: Typing characters enclosed by square brackets `[]` to match any of the characters from this list.
     - ![img](img/[hH]ello.svg)
+    - E.g.: `[hH]ello` will match every `hello` or `Hello` in the passage.
     - E.g.: `[mM]ostafa` will match every `mostafa` or `Mostafa` in the passage.
 ### Range
 - **Range**: Typing a range of characters enclosed by square brackets `[]` and separated by dashes `-` to match any of the characters from this range.
