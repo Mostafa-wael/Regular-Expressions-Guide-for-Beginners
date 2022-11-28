@@ -22,7 +22,8 @@
 - You can use this [dummy text](https://www.lipsum.com/) for testing.
 
 >> Note: we may show some regular expressions delimited by slashes but slashes are not part of the regular expressions.
->> Can set flag to ignore case
+
+>> Note: We can set a flag to ignore the case.
 
 ### Simple text
 - **String**: Typing a string of characters will match that string.
@@ -208,5 +209,18 @@ For performing matches based on information that follows or precedes a pattern, 
     - Asserts that what immediately precedes the current position in the string is not `f`
     - `(?<!y)z` will match `z` in `zyx` but will not match `z` in `xyz`.
   - >> we used `!` instead of `=` in the -ve expressions. 
+
+## Simple Example
+Write a RegEx to concatenate sperate digits. E.g.: `2 3` be `23`, ...
+
+Answer:  `s/(?=\d)\s+(?<=\d)//`.
+
+Illustration:
+- To replace `x` with `y`: `s/x/y/`
+- To remove `x`: `s/x//`
+- We want to select everyspace(s) that is bounded by two digits:
+  - Should be precceded by a digit: `(?=\d)`.
+  - Followed by a digit: `(?<=\d)`.
+  - Any number of spaces: `\s+`.
 
 >> Diagrams made with [Regex Pal](https://www.regexpal.com/).
