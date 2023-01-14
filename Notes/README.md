@@ -1,17 +1,4 @@
-# Natural Language Processing (Lec 1)
-## What is Natural Language Processing (NLP)?
-- A field that deals with Artificial Intelligence (AI) that is concerned with enabling computers to **understand** and **process** human language.
-## But?
-- **Computer**: Need structured data.
-- **Human speech**: Unstructured and ambiguous in nature.
-
-## Early NLP Systems (ELIZA)
-- Simple program that **uses pattern matching** to recognize phrases like “I need X” and translate them into suitable outputs like “What would it mean to you if you got X?”.
-- Many people who interacted with ELIZA came to believe that it really understood them and their problems.
-- One of the most important tools for describing text patterns: **the regular expression**.
-
----
-## Regular Expressions
+# Regular Expressions
 - Formally, a regular expression is an **algebraic notation** for characterizing a set of strings.
 - Useful for searching in texts, we have:
   - A pattern to search for
@@ -25,21 +12,21 @@
 
 >> Note: We can set a flag to ignore the case.
 
-### Simple text
+## Simple text
 - **String**: Typing a string of characters will match that string.
     - E.g.: `mostafa` will match every `mostafa` in the passage.
 - **Single Character**: Typing a solo characters will match that characters.
     - E.g.: `!` will match every `!` in the passage.
-### Disjunction
+## Disjunction
 - **Disjunction**: Typing characters enclosed by square brackets `[]` to match any of the characters from this list.
     - ![img](img/[hH]ello.svg)
     - E.g.: `[hH]ello` will match every `hello` or `Hello` in the passage.
     - E.g.: `[mM]ostafa` will match every `mostafa` or `Mostafa` in the passage.
-### Range
+## Range
 - **Range**: Typing a range of characters enclosed by square brackets `[]` and separated by dashes `-` to match any of the characters from this range.
     - E.g.: `[a-c]ello` will match every `aello`, `bello`, `cello` in the passage.
     - E.g.: `[0-9]ello` will match every `0ello`, `1ello`, `2ello`, `3ello`, `4ello`, `5ello`, `6ello`, `7ello`, `8ello`, `9ello` in the passage.
-### Caret
+## Caret
 -  **Caret**: The square braces can also be used to specify what a single character cannot be, by use of the caret `^`.
    - If the caret `^` is the first symbol after the open square brace `[`, the resulting pattern is negated.
    - E.g.: `[^a]` will match any single character (including special characters) except `a`.
@@ -50,7 +37,7 @@
    - ![img](img/a[^0-9]b.svg)
    - This is only true when the caret is the first symbol after the open square brace. If it occurs anywhere else, it usually stands for a caret.
    - E.g.: `a^b` will match every `a^b`.
-### Quantifiers
+## Quantifiers
 - **Question Mark**: The `?` indicates **zero** or **one** occurrences of the **preceding** element. 
   - ![img](img/colou_r.svg)
   - E.g.: `colou?r` matches both `color` and `colour`.
@@ -71,7 +58,7 @@
 - **{min,max}**: The **preceding** item is matched at **between min and max** times.
   - ![img](img/NLP{3,5}.svg)
   - E.g.: `NLP{3,5}` matches `NLPPP`, `NLPPPP`, `NLPPPPP` ,but not `NLP` or `NLPP`.
-### Wildcard & Anchors
+## Wildcard & Anchors
 - **Dot**: The `.` matches any single character except the newline character `\n`.
   - E.g.: `a.c` matches `abc`, `a c`, `a1c`, `a-c`, and so on.
   - E.g.: `.{5}` matches any five-character string.
@@ -98,7 +85,7 @@
     - E.g.: `\b\d\d:\d\d\b` matches `1:30` in `I wrote this at 01:30 AM`
   - **Non-Word Boundary**: The `\B` matches a **non-word boundary** which is any word character like **digits**, **underscores**, or **letters**.
     - E.g.: `\BWael` matches `Wael` in `mostafa_Wael`, `mostafa5Wael` or `mostafaWael`, but not `Wael` in `mostafa Wael` or `mostafa-Wael`.
-### Grouping
+## Grouping
 - **Pipe Symbol**: The `|` matches either the **preceding** or the **following** element.
   - E.g.: `hobby|ies` matches `hobby` in `my hobby` and `ies` in `hobbies`.
   - ![img](img/hobby_ies.svg)
@@ -107,7 +94,7 @@
   - ![img](img/hobb(y_ies).svg)
   - E.g.: `a(bc)+` matches `abc` in `abc`, `abcbc` in `abcbc`, and `abcbcbc` in `abcbcbccc`.
   - ![img](img/a(bc)+.svg)
-#### Aliases
+### Aliases
 - **Aliases**: To save typing for common ranges.
   - **\d**: Expands to `[0-9]` and matches any digit.
     - E.g.: `\d` or `[0-9]` match `0` in `0abc` and `9` in `9abc`.
@@ -136,7 +123,7 @@
     - E.g.: `\S\S\S` or `[^ \t\n\r\f\v][^ \t\n\r\f\v][^ \t\n\r\f\v]` match `Mos` and `afa` in `Mos   afa`.
     - ![img](img/_S_S_S.svg)
   
-### Backslash
+## Backslash
 - **Backslashes**: To refer to characters that are special themselves. 
   - **\\***: Matches the `*`.
   - **\\.**: Matches the `.`.
