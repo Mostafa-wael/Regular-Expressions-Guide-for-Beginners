@@ -137,7 +137,7 @@ Write a RegEx to find cases of the English word `the`. We want to get even if it
 1. `the`:
    - ![the](img/the.svg)
    - Wrong!
-   - Misses The with capital `T`.
+   - Misses `The` with capital `T`.
 2. `[tT]he`: 
    - ![tT](img/[tT]he.svg)
    - Wrong!
@@ -165,7 +165,7 @@ Write a RegEx to find cases of the English word `the`. We want to get even if it
 ## Capturing Groups & Referencing
 - Regex stores the captured patterns in memory and they can be called back and forth.
 - To do so, we must specify the regex in parentheses `()`.
-- E.g.: `CMP([0-9]+)` will capture the number `23` in `CMP 23` and save it i the memory.
+- E.g.: `CMP([0-9]+)` will capture the number `23` in `CMP 23` and save it in the memory.
 - We can call that exact number using a one-based index like this: `CMP([0-9]+) are \1 years old` will match `CMP 23 are 23 years old`.
 - E.g.: `The (.*)er they (.*)` will capture `The faster they ran` where `fast` can be accessed using `\1` and `ran` can be accessed using `\2`.
 - E.g.: `The (.*)er they (.*), the \1er we \2` will capture `The faster they ran, the faster we ran`.
