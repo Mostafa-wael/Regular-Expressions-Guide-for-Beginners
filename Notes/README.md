@@ -127,7 +127,8 @@
 - **Backslashes**: To refer to characters that are special themselves. 
   - **\\***: Matches the `*`.
   - **\\.**: Matches the `.`.
-  - **\?**: Matches the `?`.
+  - **\\?**: Matches the `?`.
+- Or even:
   - **\n**: Matches the newline character.
   - **\t**: Matches the tab character. 
 
