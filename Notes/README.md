@@ -81,10 +81,10 @@
       - Before the `f`.
       - After the `s` in `focus`.
     - E.g.: `\bMostafa\b` matches `Mostafa` in `Mostafa, focus!`, but not `Mostafa` in `Mostafaaaaa, focus!`.
-    - E.g.: `\bWael` matches `Wael` in `mostafa Wael` and `mostafa-Wael`, but not `Wael` in `mostafa_Wael` or `mostafa5Wael` or `mostafaWael`. 
+    - E.g.: `\bWael` matches `Wael` in `mostafa Wael` and `mostafa-Wael`, but not `Wael` in `mostafa_Wael` or `mostafa2Wael` or `mostafaWael`. 
     - E.g.: `\b\d\d:\d\d\b` matches `1:30` in `I wrote this at 01:30 AM`
   - **Non-Word Boundary**: The `\B` matches a **non-word boundary** which is any word character like **digits**, **underscores**, or **letters**.
-    - E.g.: `\BWael` matches `Wael` in `mostafa_Wael`, `mostafa5Wael` or `mostafaWael`, but not `Wael` in `mostafa Wael` or `mostafa-Wael`.
+    - E.g.: `\BWael` matches `Wael` in `mostafa_Wael`, `mostafa2Wael` or `mostafaWael`, but not `Wael` in `mostafa Wael` or `mostafa-Wael`.
 ## Grouping
 - **Pipe Symbol**: The `|` matches either the **preceding** or the **following** element.
   - E.g.: `hobby|ies` matches `hobby` in `my hobby` and `ies` in `hobbies`.
