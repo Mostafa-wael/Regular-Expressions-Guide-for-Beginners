@@ -1,4 +1,4 @@
-# Sheet 1
+# Exercises
 ## 1) Write regular expressions for the following:
 1. The set of all alphabetic strings:
    - We mean all the alphabetic characters repeated any number of time.

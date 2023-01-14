@@ -1,4 +1,5 @@
-# Natural Language Processing Lectures
+# Regular-Expressions-Guide-for-Beginners
+
 ## Table of Contents
-- [Lecture 1 Notes](./lecture_1/README.md)
-- [Sheet 1 Solutions](./sheet_1/README.md)
+- [Notes](./Notes/README.md)
+- [Solved Exercises](./SolvedExercises/README.md)
